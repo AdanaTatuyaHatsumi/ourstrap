@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Navbar · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    main { padding: 2rem; max-width: 980px; margin: 0 auto; }
+    .demo-hero { padding:2rem; text-align:center; background:linear-gradient(180deg,#fff,#f7fbff); border-radius:12px; }
+    .spacer { height: 1rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky navbar -->
+  <header class="os-navbar">
+    <div class="os-container os-navbar-inner">
+      <a href="#" class="os-brand">Ourstrap</a>
+
+      <nav id="os-nav" class="os-nav" aria-label="Main navigation">
+        <a class="os-nav-link" href="#">Home</a>
+        <a class="os-nav-link" href="#">Docs</a>
+
+        <div class="dropdown" id="nav-demo-dropdown">
+          <button class="btn" type="button" data-toggle="dropdown" id="navDropBtn" aria-haspopup="true" aria-expanded="false">
+            Komponen ▾
+          </button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="navDropBtn">
+            <a role="menuitem" href="#">Buttons</a>
+            <a role="menuitem" href="#">Cards</a>
+            <a role="menuitem" href="#">Forms</a>
+          </div>
+        </div>
+
+        <a class="os-nav-link" href="#" style="margin-left:8px">GitHub</a>
+      </nav>
+
+      <button id="os-toggle" class="os-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="demo-hero">
+      <h1>Navbar — contoh penggunaan</h1>
+      <p class="lead">Sticky navbar, dropdown dengan ARIA, dan toggle mobile.</p>
+
+      <div class="spacer"></div>
+      <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" type="button" onclick="document.querySelector('#nav-demo-dropdown .btn').click()">Buka Dropdown Programatik</button>
+        <button class="btn btn-outline" type="button" onclick="alert('Contoh aksi tombol')">Aksi</button>
+      </div>
+    </section>
+
+    <section style="margin-top:1.4rem">
+      <h3>Catatan</h3>
+      <ul>
+        <li>Gunakan <code>data-toggle="dropdown"</code> atau kelas <code>.dropdown-toggle</code> untuk toggle.</li>
+        <li>Untuk mobile, tombol #os-toggle membuka <code>#os-nav</code> (examples.js sudah handle toggle).</li>
+        <li>Dropdown menutup otomatis saat klik di luar.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="os-footer" style="margin-top:2rem">
+    <div class="os-container">Ourstrap — contoh Navbar · &copy; 2025</div>
+  </footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

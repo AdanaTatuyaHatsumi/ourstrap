@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Tooltip · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:900px;margin:0 auto}.demo{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}</style>
+</head>
+<body>
+  <header class="os-navbar"><div class="os-container os-navbar-inner"><a href="#" class="os-brand">Ourstrap</a></div></header>
+
+  <main>
+    <h1>Tooltip (simple)</h1>
+    <p class="lead">Gunakan atribut <code>data-tooltip</code> pada elemen.</p>
+
+    <section class="card mt-2">
+      <div class="demo">
+        <button class="btn" data-tooltip="Saya adalah tooltip">Hover tombol</button>
+        <span data-tooltip="Informasi singkat" style="padding:.5rem;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.04)">Hover teks</span>
+        <a href="#" class="demo-link" data-tooltip="Link dengan tooltip">Hover link</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="os-footer"><div class="os-container">Ourstrap — contoh Tooltip · &copy; 2025</div></footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

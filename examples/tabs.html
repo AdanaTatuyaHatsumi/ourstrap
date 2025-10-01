@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Tabs · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    main{padding:2rem;max-width:900px;margin:0 auto}
+    .tab-demo { max-width:720px; margin:0 auto; }
+    .tab-panel { background: #fff; padding:1rem; border-radius:8px; box-shadow: 0 6px 18px rgba(16,24,40,0.04); margin-top:0.6rem; }
+  </style>
+</head>
+<body>
+
+  <header class="os-navbar">
+    <div class="os-container os-navbar-inner">
+      <a href="#" class="os-brand">Ourstrap</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Tabs — contoh & keyboard navigation</h1>
+    <p class="lead">Gunakan panah kiri/kanan, Home/End untuk berpindah antar tab — di samping klik biasa.</p>
+
+    <section class="tab-demo mt-2">
+      <div class="tabs" role="tablist" aria-label="Demo Tabs">
+        <button id="t1" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel1" data-tab="panel1" type="button">Profil</button>
+        <button id="t2" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel2" data-tab="panel2" type="button">Pengaturan</button>
+        <button id="t3" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel3" data-tab="panel3" type="button">Riwayat</button>
+      </div>
+
+      <div id="panel1" class="tab-content active tab-panel" role="tabpanel" aria-labelledby="t1">
+        <h3 style="margin-top:0">Profil</h3>
+        <p>Ini konten profil. Contoh paragraf singkat untuk menampilkan isi tab.</p>
+      </div>
+
+      <div id="panel2" class="tab-content tab-panel" role="tabpanel" aria-labelledby="t2" aria-hidden="true" style="display:none">
+        <h3 style="margin-top:0">Pengaturan</h3>
+        <p>Pengaturan akun dan preferensi pengguna.</p>
+      </div>
+
+      <div id="panel3" class="tab-content tab-panel" role="tabpanel" aria-labelledby="t3" aria-hidden="true" style="display:none">
+        <h3 style="margin-top:0">Riwayat</h3>
+        <p>Daftar aktivitas terakhir (contoh).</p>
+      </div>
+    </section>
+
+    <section style="margin-top:1.2rem">
+      <h3>Tips</h3>
+      <ul>
+        <li>Pastikan tombol tab memiliki <code>role="tab"</code> dan panel <code>role="tabpanel"</code>.</li>
+        <li>Tambahkan <code>aria-selected</code> &amp; <code>aria-controls</code> untuk aksesibilitas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="os-footer" style="margin-top:2rem">
+    <div class="os-container">Ourstrap — contoh Tabs · &copy; 2025</div>
+  </footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

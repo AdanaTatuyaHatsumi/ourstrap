@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Form · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:800px;margin:0 auto}form .row{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}</style>
+</head>
+<body>
+  <header class="os-navbar"><div class="os-container os-navbar-inner"><a href="#" class="os-brand">Ourstrap</a></div></header>
+
+  <main>
+    <h1>Form</h1>
+    <p class="lead">Contoh form sederhana dengan validasi HTML bawaan.</p>
+
+    <section class="card mt-2">
+      <form id="contactForm">
+        <div class="row">
+          <div class="form-group"><label for="fname">Nama Depan</label><input id="fname" name="fname" type="text" required></div>
+          <div class="form-group"><label for="lname">Nama Belakang</label><input id="lname" name="lname" type="text" required></div>
+        </div>
+        <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div class="form-group"><label for="kategori">Kategori</label>
+          <select id="kategori" name="kategori" required><option value="">Pilih...</option><option>Umum</option><option>Teknis</option></select>
+        </div>
+        <div class="form-group"><label for="message">Pesan</label><textarea id="message" name="message" rows="5" required></textarea></div>
+
+        <div style="display:flex;gap:.6rem;justify-content:flex-end">
+          <button class="btn" type="reset">Reset</button>
+          <button class="btn btn-primary" type="submit">Kirim</button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        // simple demo behaviour: show toast and reset
+        window.showToast('Form terkirim — terima kasih!', 'success');
+        this.reset();
+      });
+    </script>
+  </main>
+
+  <footer class="os-footer"><div class="os-container">Ourstrap — contoh Form · &copy; 2025</div></footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

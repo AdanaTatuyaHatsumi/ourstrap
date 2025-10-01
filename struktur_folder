@@ -1,0 +1,45 @@
+ourstrap/
+├─ README.md
+├─ LICENSE
+├─ package.json
+├─ postcss.config.cjs
+├─ .gitignore
+|
+├─ scss/                      # source (optional, jika pakai Sass)
+│  ├─ _variables.scss
+│  ├─ _reset.scss
+│  ├─ _grid.scss
+│  ├─ _components.scss
+│  ├─ _utilities.scss
+│  └─ ourstrap.scss           # entry (import semua partial)
+|
+├─ css/                       # compiled CSS
+│  ├─ ourstrap.css            # readable (dev)
+│  ├─ ourstrap.min.css        # minified (prod)
+│  └─ custom.css              # overrides proyek (opsional)
+|
+├─ js/                        # JavaScript
+│  ├─ ourstrap.js             # readable (dev)
+│  ├─ ourstrap.min.js         # minified (prod)
+│  └─ examples.js             # small demo helpers (opsional)
+|
+├─ docs/                      # dokumentasi / playground
+│  ├─ index.html
+│  └─ ourstrap-doc.html
+|
+├─ examples/                  # contoh halaman terpisah
+│  ├─ navbar.html
+│  ├─ modal.html
+│  └─ tabs.html
+|
+├─ assets/
+│  ├─ images/
+│  └─ fonts/
+|
+├─ dist/                      # artefak publik (opsional, dipakai untuk deploy)
+│  ├─ ourstrap.min.css
+│  └─ ourstrap.min.js
+|
+└─ tools/                     # skrip build / konfigurasi (opsional)
+   ├─ postcss.config.cjs      # (jika tidak di root)
+   └─ build-scripts.sh

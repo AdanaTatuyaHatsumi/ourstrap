@@ -1,0 +1,10 @@
+<!-- assets/images/placeholder-600x300.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-label="Placeholder image">
+  <rect width="600" height="300" rx="12" fill="#eef6ff"/>
+  <g fill="#cfe5ff">
+    <rect x="24" y="40" width="200" height="120" rx="8"/>
+    <rect x="240" y="40" width="336" height="120" rx="8"/>
+    <rect x="24" y="176" width="552" height="96" rx="8"/>
+  </g>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#8aaefb" font-family="Inter, system-ui, Arial, sans-serif" font-size="20">Placeholder 600×300</text>
+</svg>

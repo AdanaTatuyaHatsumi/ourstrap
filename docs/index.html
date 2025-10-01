@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ourstrap — Docs</title>
+  <meta name="description" content="Ourstrap — lightweight UI framework. Buka dokumentasi dan playground." />
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    /* small local styles for the landing page */
+    .hero { padding:6rem 1rem; text-align:center; }
+    .hero h1 { margin-bottom:.5rem; font-size:2rem; }
+    .cards { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; }
+    .card-cta { min-width:220px; max-width:320px; text-align:left; }
+    .muted { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="os-navbar">
+    <div class="os-container os-navbar-inner">
+      <a href="#" class="os-brand">Ourstrap</a>
+      <nav class="os-nav" id="os-nav" aria-label="Main">
+        <a class="os-nav-link" href="ourstrap-doc.html">Docs</a>
+        <a class="os-nav-link" href="../examples/navbar.html" target="_blank">Examples</a>
+        <a class="os-nav-link" href="#" target="_blank">GitHub</a>
+      </nav>
+      <button id="os-toggle" class="os-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container hero" id="main">
+    <div class="hero-inner">
+      <h1>Ourstrap</h1>
+      <p class="lead muted">Framework UI ringan & modern — komponen siap pakai untuk mempercepat pembangunan interface web.</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="ourstrap-doc.html">Buka Dokumentasi</a>
+        <a class="btn btn-outline" href="ourstrap-doc.html#buttons">Lihat Komponen</a>
+      </div>
+
+      <div class="cards mt-2">
+        <div class="card card-cta">
+          <h3 style="margin:0 0 8px">Komponen</h3>
+          <p class="muted" style="margin:0">Buttons, Badges, Alerts, Cards, Modal, Tabs, Toast, Accordion, Stepper, dll.</p>
+        </div>
+        <div class="card card-cta">
+          <h3 style="margin:0 0 8px">Build</h3>
+          <p class="muted" style="margin:0">Sass + PostCSS + Terser. Skrip build ada di <code>package.json</code>.</p>
+        </div>
+        <div class="card card-cta">
+          <h3 style="margin:0 0 8px">License</h3>
+          <p class="muted" style="margin:0">MIT — bebas dipakai & dimodifikasi.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="os-footer">
+    <div class="os-container">
+      &copy; <strong>Ourstrap</strong> — dibuat oleh Kasirun. Lihat <a href="../LICENSE">LICENSE</a>.
+    </div>
+  </footer>
+
+  <script src="../js/examples.js" defer></script>
+  <script>
+    // small toggle: reuse examples.js if not present
+    (function(){
+      const nav = document.getElementById('os-nav');
+      const btn = document.getElementById('os-toggle');
+      if (!nav || !btn) return;
+      btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+      window.addEventListener('resize', ()=> { if (window.innerWidth >= 768) nav.classList.remove('open'); });
+    })();
+  </script>
+</body>
+</html>

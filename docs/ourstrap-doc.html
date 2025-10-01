@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ourstrap — Documentation (Full)</title>
+  <meta name="description" content="Dokumentasi Ourstrap — framework UI sederhana, cepat, dan ringan untuk web developer." />
+  <meta name="theme-color" content="#e9f2ff" />
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    /* local docs tweaks */
+    .wrap{ max-width:1100px; margin:30px auto; padding:0 20px; }
+    header.docs-header{ display:flex; align-items:center; gap:18px; justify-content:space-between; margin-bottom:26px; }
+    nav.toc{ display:flex; gap:8px; flex-wrap:wrap; }
+    pre.code { white-space: pre; }
+  </style>
+</head>
+<body>
+
+  <!-- Aria-live region for screen reader feedback -->
+  <div id="os-aria-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="sr-only" onfocus="this.classList.remove('sr-only')" onblur="this.classList.add('sr-only')">Lewati ke konten</a>
+
+  <div class="wrap">
+    <header class="docs-header">
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="index.html" class="os-brand" style="text-decoration:none">Ourstrap</a>
+        <h1 style="margin:0;font-size:20px">Docs</h1>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <a href="#buttons">Buttons</a>
+        <a href="#badges">Badges</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#cards">Cards</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#navbar">Navbar</a>
+        <a href="#grid">Grid</a>
+        <a href="#modal">Modal</a>
+        <a href="#tabs">Tabs</a>
+        <a href="#pagination">Pagination</a>
+        <a href="#progress">Progress</a>
+        <a href="#tooltip">Tooltip</a>
+        <a href="#toast">Toast</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#stepper">Stepper</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+
+      <!-- BUTTONS -->
+      <section id="buttons" class="comp">
+        <h2>Buttons</h2>
+        <div class="preview">
+          <button class="btn" type="button">Default</button>
+          <button class="btn btn-primary" type="button">Primary</button>
+          <button class="btn btn-outline" type="button">Outline</button>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;button class="btn" type="button"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary" type="button"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline" type="button"&gt;Outline&lt;/button&gt;
+          </pre>
+        </div>
+      </section>
+
+      <!-- BADGES -->
+      <section id="badges" class="comp">
+        <h2>Badges</h2>
+        <div class="preview">
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-danger">Danger</span>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+          </pre>
+        </div>
+      </section>
+
+      <!-- ALERTS -->
+      <section id="alerts" class="comp">
+        <h2>Alerts</h2>
+        <div class="preview">
+          <div class="alert alert-primary" role="status">Informasi: ini alert primary.</div>
+          <div class="alert alert-success" role="status">Berhasil! Aksi sukses.</div>
+          <div class="alert alert-warning" role="status">Peringatan: cek input.</div>
+          <div class="alert alert-danger" role="status">Error: sesuatu salah.</div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="alert alert-primary" role="status"&gt;Informasi...&lt;/div&gt;
+&lt;div class="alert alert-success" role="status"&gt;Berhasil!...&lt;/div&gt;
+&lt;div class="alert alert-warning" role="status"&gt;Peringatan...&lt;/div&gt;
+&lt;div class="alert alert-danger" role="status"&gt;Error...&lt;/div&gt;
+          </pre>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section id="cards" class="comp">
+        <h2>Cards</h2>
+        <div class="preview">
+          <div class="card" style="max-width:900px">
+            <div class="card-img" style="background-image:url('https://picsum.photos/900/300?random=1')"></div>
+            <h3 style="margin:0 0 8px">Card Title</h3>
+            <p style="margin:0;color:var(--muted)">Deskripsi singkat card. Gunakan untuk highlight konten.</p>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="card"&gt;
+  &lt;div class="card-img" style="background-image:url('https://picsum.photos/900/300')"&gt;&lt;/div&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Deskripsi singkat card.&lt;/p&gt;
+&lt;/div&gt;
+          </pre>
+        </div>
+      </section>
+
+      <!-- TABLE -->
+      <section id="table" class="comp">
+        <h2>Table</h2>
+        <div class="preview">
+          <div style="overflow:auto">
+          <table class="os-table" style="min-width:700px" role="table" aria-label="Tabel contoh">
+            <thead>
+              <tr><th scope="col">#</th><th scope="col">Nama</th><th scope="col">Email</th><th scope="col">Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Ani</td><td>ani@mail.com</td><td><span class="badge badge-success">Aktif</span></td></tr>
+              <tr><td>2</td><td>Budi</td><td>budi@mail.com</td><td><span class="badge badge-warning">Pending</span></td></tr>
+              <tr><td>3</td><td>Citra</td><td>citra@mail.com</td><td><span class="badge badge-danger">Nonaktif</span></td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;table class="os-table"&gt; ... &lt;/table&gt;</pre>
+        </div>
+      </section>
+
+      <!-- FORM -->
+      <section id="form" class="comp">
+        <h2>Form</h2>
+        <div class="preview">
+          <form onsubmit="return false" style="max-width:650px" aria-label="Form contoh">
+            <div class="form-group"><label for="name">Nama</label><input id="name" type="text" placeholder="Nama lengkap"></div>
+            <div class="form-group"><label for="emailf">Email</label><input id="emailf" type="email" placeholder="email@domain.com"></div>
+            <div class="form-group"><label for="kategori">Kategori</label>
+              <select id="kategori"><option>Umum</option><option>Teknis</option><option>VIP</option></select>
+            </div>
+            <div class="form-group"><label for="pesan">Pesan</label><textarea id="pesan" rows="4" placeholder="Tulis pesan"></textarea></div>
+            <button class="btn btn-primary" type="button">Kirim</button>
+          </form>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;form&gt;...&lt;/form&gt;</pre>
+        </div>
+      </section>
+
+      <!-- NAVBAR + DROPDOWN -->
+      <section id="navbar" class="comp">
+        <h2>Navbar & Dropdown</h2>
+        <div class="preview">
+          <div class="card" style="display:flex;align-items:center;gap:12px;justify-content:space-between">
+            <div style="font-weight:700;color:var(--primary)">Ourstrap</div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <a href="#" class="demo-link" style="text-decoration:none;color:var(--muted)">Home</a>
+
+              <div class="dropdown" id="demoDropdownWrapper">
+                <button id="demoDropdownBtn" class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="demoDropdownBtn">
+                  <a role="menuitem" href="#">Profil</a>
+                  <a role="menuitem" href="#">Pengaturan</a>
+                  <a role="menuitem" href="#">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="dropdown"&gt;
+  &lt;button id="demoDropdownBtn" data-toggle="dropdown"&gt;Menu&lt;/button&gt;
+  &lt;div class="dropdown-menu" aria-labelledby="demoDropdownBtn"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- GRID -->
+      <section id="grid" class="comp">
+        <h2>Grid (12 columns)</h2>
+        <div class="preview">
+          <div class="grid cols-12">
+            <div class="col" style="grid-column:span 8">col-8 (main)</div>
+            <div class="col" style="grid-column:span 4">col-4 (sidebar)</div>
+          </div>
+          <div class="spacer"></div>
+          <div class="grid cols-12">
+            <div class="col" style="grid-column:span 4">col-4</div>
+            <div class="col" style="grid-column:span 4">col-4</div>
+            <div class="col" style="grid-column:span 4">col-4</div>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="grid cols-12"&gt;...&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- MODAL -->
+      <section id="modal" class="comp">
+        <h2>Modal</h2>
+        <div class="preview">
+          <button class="btn btn-primary" type="button" data-modal-open="modal-m1">Buka Modal</button>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;button data-modal-open="modal-m1"&gt;Buka Modal&lt;/button&gt;
+&lt;div id="modal-m1" class="os-modal" role="dialog" aria-modal="true" aria-labelledby="modal-m1-title" aria-describedby="modal-m1-desc"&gt;...&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- TABS -->
+      <section id="tabs" class="comp">
+        <h2>Tabs</h2>
+        <div class="preview">
+          <div style="max-width:700px">
+            <div class="tabs" role="tablist" aria-label="Contoh Tab">
+              <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab1" id="tabBtn1" data-tab="tab1" type="button">Tab 1</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab2" id="tabBtn2" data-tab="tab2" type="button">Tab 2</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab3" id="tabBtn3" data-tab="tab3" type="button">Tab 3</button>
+            </div>
+            <div id="tab1" class="tab-content active" role="tabpanel" aria-labelledby="tabBtn1" aria-hidden="false"><p>Konten Tab 1</p></div>
+            <div id="tab2" class="tab-content" role="tabpanel" aria-labelledby="tabBtn2" aria-hidden="true"><p>Konten Tab 2</p></div>
+            <div id="tab3" class="tab-content" role="tabpanel" aria-labelledby="tabBtn3" aria-hidden="true"><p>Konten Tab 3</p></div>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="tabs" role="tablist"&gt;...&lt;/div&gt;
+&lt;div id="tab1" class="tab-content"&gt;...&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- PAGINATION -->
+      <section id="pagination" class="comp">
+        <h2>Pagination</h2>
+        <div class="preview">
+          <div class="pagination" role="navigation" aria-label="Pagination">
+            <a href="#" class="demo-link" aria-label="Previous">&laquo;</a>
+            <a href="#" class="demo-link" aria-current="page">1</a>
+            <a href="#" class="demo-link active" aria-current="true">2</a>
+            <a href="#" class="demo-link">3</a>
+            <a href="#" class="demo-link" aria-label="Next">&raquo;</a>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="pagination"&gt;...&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- PROGRESS -->
+      <section id="progress" class="comp">
+        <h2>Progress Bar</h2>
+        <div class="preview">
+          <div class="progress" style="max-width:500px"><div class="progress-fill" data-width="65%">65%</div></div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="progress"&gt;&lt;div class="progress-fill" data-width="65%"&gt;65%&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- TOOLTIP -->
+      <section id="tooltip" class="comp">
+        <h2>Tooltip</h2>
+        <div class="preview">
+          <button class="btn" type="button" data-tooltip="Ini tooltip tombol">Hover tombol</button>
+          <span style="margin-left:12px" data-tooltip="Tooltip teks">Hover teks</span>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;button data-tooltip="Ini tooltip"&gt;Hover&lt;/button&gt;</pre>
+        </div>
+      </section>
+
+      <!-- TOAST -->
+      <section id="toast" class="comp">
+        <h2>Toast (notification)</h2>
+        <div class="preview">
+          <button class="btn" type="button" data-toast='{"msg":"Sukses tersimpan","type":"success"}'>Tampilkan Toast Success</button>
+          <button class="btn btn-outline" type="button" data-toast='{"msg":"Ada peringatan","type":"warning"}'>Tampilkan Toast Warning</button>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;button data-toast='{"msg":"Sukses","type":"success"}'&gt;Tampilkan&lt;/button&gt;</pre>
+        </div>
+      </section>
+
+      <!-- ACCORDION -->
+      <section id="accordion" class="comp">
+        <h2>Accordion / Collapse</h2>
+        <div class="preview">
+          <div class="accordion" style="max-width:700px">
+            <div class="item"><div class="header" role="button" tabindex="0">Header 1</div><div class="body">Isi panel 1</div></div>
+            <div class="item"><div class="header" role="button" tabindex="0">Header 2</div><div class="body">Isi panel 2</div></div>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;div class="accordion"&gt;...&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <!-- STEPPER -->
+      <section id="stepper" class="comp">
+        <h2>Stepper (Multi-step)</h2>
+        <div class="preview">
+          <div style="max-width:700px">
+            <div class="stepper" id="stepperHeader">
+              <div class="step">1</div>
+              <div class="step">2</div>
+              <div class="step">3</div>
+            </div>
+            <div id="step-1" class="step-pane"><p>Form step 1</p></div>
+            <div id="step-2" class="step-pane" style="display:none"><p>Form step 2</p></div>
+            <div id="step-3" class="step-pane" style="display:none"><p>Finish</p></div>
+            <div style="margin-top:10px"><button class="btn" type="button" data-step="prev">Prev</button><button class="btn btn-primary" type="button" data-step="next">Next</button></div>
+          </div>
+        </div>
+        <div class="code-wrap">
+          <button class="copy-btn" type="button" aria-label="Salin kode">Salin</button>
+          <pre class="code">&lt;!-- simple stepper --&gt;</pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- GLOBAL UI NODES -->
+  <div id="modal-m1" class="os-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-m1-title" aria-describedby="modal-m1-desc">
+    <div class="dialog" role="document">
+      <button class="close" type="button" data-modal-close aria-label="Tutup dialog">✕</button>
+      <h3 id="modal-m1-title">Judul Modal</h3>
+      <p id="modal-m1-desc">Ini contoh modal sederhana Ourstrap.</p>
+      <div style="text-align:right"><button class="btn btn-outline" type="button" data-modal-close>Tutup</button></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite" role="status"></div>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "ourstrap",
+  "version": "1.0.0",
+  "description": "Ourstrap — lightweight UI framework (buttons, cards, modal, tabs, dropdown, etc.)",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass scss/ourstrap.scss css/ourstrap.css --style=expanded --no-source-map",
+    "minify:css": "postcss css/ourstrap.css -o css/ourstrap.min.css --map",
+    "build:js": "terser js/ourstrap.js -c -m -o js/ourstrap.min.js",
+    "build": "npm run build:css && npm run minify:css && npm run build:js",
+    "watch:css": "sass --watch scss/ourstrap.scss:css/ourstrap.css --style=expanded",
+    "watch": "npm-run-all --parallel watch:css",
+    "clean": "rimraf css/ourstrap.css css/ourstrap.min.css js/ourstrap.min.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "ourstrap",
+    "ui",
+    "css",
+    "frontend",
+    "component-library"
+  ],
+  "author": "Kasirun Alfauzi BM Sitorus",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.2.17",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.73.0",
+    "terser": "^5.20.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.1"
+  }
+}

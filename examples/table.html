@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Table · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:1000px;margin:0 auto}.actions{display:flex;gap:.5rem}</style>
+</head>
+<body>
+  <header class="os-navbar"><div class="os-container os-navbar-inner"><a href="#" class="os-brand">Ourstrap</a></div></header>
+
+  <main>
+    <h1>Table</h1>
+    <p class="lead">Tabel responsif contoh dengan badge status dan actions.</p>
+
+    <section class="card mt-2">
+      <div class="table-responsive">
+        <table class="os-table" role="table" aria-label="Daftar user">
+          <thead>
+            <tr><th scope="col">#</th><th scope="col">Nama</th><th scope="col">Email</th><th scope="col">Role</th><th scope="col">Status</th><th scope="col">Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>Ani</td><td>ani@mail.com</td><td>User</td>
+              <td><span class="badge badge-success">Aktif</span></td>
+              <td class="actions"><button class="btn btn-sm" onclick="window.showToast('Profil Ani','info')">Lihat</button></td>
+            </tr>
+            <tr>
+              <td>2</td><td>Budi</td><td>budi@mail.com</td><td>Admin</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+              <td class="actions"><button class="btn btn-sm" onclick="window.showToast('Profil Budi','info')">Lihat</button></td>
+            </tr>
+            <tr>
+              <td>3</td><td>Citra</td><td>citra@mail.com</td><td>User</td>
+              <td><span class="badge badge-danger">Nonaktif</span></td>
+              <td class="actions"><button class="btn btn-sm" onclick="window.showToast('Profil Citra','info')">Lihat</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="os-footer"><div class="os-container">Ourstrap — contoh Table · &copy; 2025</div></footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

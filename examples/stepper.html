@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Stepper · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:900px;margin:0 auto}.step-demo{max-width:640px;margin:0 auto}</style>
+</head>
+<body>
+  <header class="os-navbar"><div class="os-container os-navbar-inner"><a href="#" class="os-brand">Ourstrap</a></div></header>
+
+  <main>
+    <h1>Stepper (multi-step)</h1>
+    <p class="lead">Contoh stepper sederhana dengan tombol Next / Prev.</p>
+
+    <section class="card mt-2 step-demo">
+      <div class="stepper" id="stepperHeader">
+        <div class="step">1</div>
+        <div class="step">2</div>
+        <div class="step">3</div>
+      </div>
+
+      <div id="step-1" class="step-pane">
+        <h3 style="margin-top:0">Langkah 1</h3>
+        <p>Isi form / instruksi langkah 1.</p>
+      </div>
+      <div id="step-2" class="step-pane" style="display:none">
+        <h3 style="margin-top:0">Langkah 2</h3>
+        <p>Isi form / instruksi langkah 2.</p>
+      </div>
+      <div id="step-3" class="step-pane" style="display:none">
+        <h3 style="margin-top:0">Selesai</h3>
+        <p>Ringkasan / finish.</p>
+      </div>
+
+      <div style="display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem">
+        <button class="btn" type="button" data-step="prev">Prev</button>
+        <button class="btn btn-primary" type="button" data-step="next">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="os-footer"><div class="os-container">Ourstrap — contoh Stepper · &copy; 2025</div></footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

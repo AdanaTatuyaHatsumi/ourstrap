@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Modal · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    main{padding:2rem;max-width:900px;margin:0 auto}
+    .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+  </style>
+</head>
+<body>
+
+  <header class="os-navbar">
+    <div class="os-container os-navbar-inner">
+      <a href="#" class="os-brand">Ourstrap</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Modal — contoh & aksesibilitas</h1>
+    <p class="lead">Modal mendukung focus trap, restore focus, backdrop click, dan tombol close keyboard (Esc).</p>
+
+    <div class="grid mt-2">
+      <div class="card">
+        <h3>Modal sederhana</h3>
+        <p class="mb-2">Contoh modal dengan judul dan deskripsi.</p>
+        <button class="btn btn-primary" type="button" data-modal-open="modal-simple">Buka Modal Sederhana</button>
+      </div>
+
+      <div class="card">
+        <h3>Modal form</h3>
+        <p class="mb-2">Modal berisi form kecil — coba tab dan isi input.</p>
+        <button class="btn btn-outline" type="button" data-modal-open="modal-form">Buka Modal Form</button>
+      </div>
+
+      <div class="card">
+        <h3>Modal konfirmasi</h3>
+        <p class="mb-2">Biasanya dipakai untuk confirm/alert.</p>
+        <button class="btn" type="button" data-modal-open="modal-confirm">Buka Konfirmasi</button>
+      </div>
+    </div>
+
+    <!-- Modal: Simple -->
+    <div id="modal-simple" class="os-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-simple-title" aria-describedby="modal-simple-desc">
+      <div class="os-modal-dialog dialog" role="document">
+        <button class="os-modal-close" type="button" data-modal-close aria-label="Tutup">✕</button>
+        <h3 id="modal-simple-title">Modal Sederhana</h3>
+        <p id="modal-simple-desc">Ini contoh modal sederhana Ourstrap. Tekan ESC untuk menutup atau klik di luar dialog.</p>
+        <div style="text-align:right;margin-top:12px">
+          <button class="btn btn-outline" type="button" data-modal-close>Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Form -->
+    <div id="modal-form" class="os-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-form-title">
+      <div class="os-modal-dialog dialog" role="document">
+        <button class="os-modal-close" type="button" data-modal-close aria-label="Tutup">✕</button>
+        <h3 id="modal-form-title">Kirim Feedback</h3>
+        <form onsubmit="event.preventDefault(); window.showToast('Terima kasih — feedback tersimpan','success'); document.querySelector('#modal-form [data-modal-close]').click();" style="margin-top:10px">
+          <label for="nama">Nama</label>
+          <input id="nama" type="text" placeholder="Nama lengkap" required>
+          <div style="height:8px"></div>
+          <label for="msg">Pesan</label>
+          <textarea id="msg" rows="4" placeholder="Tulis pesan..." required></textarea>
+          <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:.8rem">
+            <button class="btn" type="button" data-modal-close>Batalkan</button>
+            <button class="btn btn-primary" type="submit">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal: Confirm -->
+    <div id="modal-confirm" class="os-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-confirm-title">
+      <div class="os-modal-dialog dialog" role="document">
+        <button class="os-modal-close" type="button" data-modal-close aria-label="Tutup">✕</button>
+        <h3 id="modal-confirm-title">Hapus item?</h3>
+        <p>Apakah Anda yakin ingin menghapus item ini? Aksi tidak bisa dibatalkan.</p>
+        <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:.6rem">
+          <button class="btn" type="button" data-modal-close>Tidak</button>
+          <button class="btn btn-primary" type="button" onclick="window.showToast('Item dihapus','success'); document.querySelector('#modal-confirm [data-modal-close]').click()">Ya, Hapus</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="os-footer" style="margin-top:2rem">
+    <div class="os-container">Ourstrap — contoh Modal · &copy; 2025</div>
+  </footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>

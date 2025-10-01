@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Progress · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:900px;margin:0 auto}.controls{display:flex;gap:.6rem;align-items:center}</style>
+</head>
+<body>
+  <header class="os-navbar"><div class="os-container os-navbar-inner"><a href="#" class="os-brand">Ourstrap</a></div></header>
+
+  <main>
+    <h1>Progress Bar</h1>
+    <p class="lead">Animasi progress menggunakan atribut <code>data-width</code>.</p>
+
+    <section class="card mt-2">
+      <div class="progress" style="max-width:600px">
+        <div id="pbar" class="progress-fill" data-width="40%">40%</div>
+      </div>
+
+      <div class="controls mt-2">
+        <button class="btn" id="dec">-10%</button>
+        <button class="btn btn-primary" id="inc">+10%</button>
+        <span class="muted" id="pct" style="margin-left:8px">40%</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="os-footer"><div class="os-container">Ourstrap — contoh Progress · &copy; 2025</div></footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+  <script>
+    // simple controls for demo
+    document.addEventListener('DOMContentLoaded', function(){
+      const bar = document.getElementById('pbar');
+      const pct = document.getElementById('pct');
+      const inc = document.getElementById('inc');
+      const dec = document.getElementById('dec');
+
+      function setWidth(n){
+        n = Math.max(0, Math.min(100, n));
+        bar.dataset.width = n + '%';
+        bar.style.width = n + '%';
+        bar.innerText = n + '%';
+        pct.innerText = n + '%';
+      }
+      inc.addEventListener('click', ()=> setWidth(parseInt(bar.dataset.width) + 10));
+      dec.addEventListener('click', ()=> setWidth(parseInt(bar.dataset.width) - 10));
+    });
+  </script>
+</body>
+</html>

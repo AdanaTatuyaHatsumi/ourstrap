@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example — Pagination · Ourstrap</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/ourstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>main{padding:2rem;max-width:900px;margin:0 auto}.demo{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}</style>
+</head>
+<body>
+  <header class="os-navbar">
+    <div class="os-container os-navbar-inner">
+      <a href="#" class="os-brand">Ourstrap</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Pagination</h1>
+    <p class="lead">Contoh tampilan pagination &amp; state aktif.</p>
+
+    <section class="card mt-2">
+      <h3 style="margin-top:0">Basic pagination</h3>
+      <div class="demo mt-1">
+        <div class="pagination" role="navigation" aria-label="Pagination example">
+          <a href="#" class="demo-link" aria-label="Previous">&laquo;</a>
+          <a href="#" class="demo-link">1</a>
+          <a href="#" class="demo-link active" aria-current="page">2</a>
+          <a href="#" class="demo-link">3</a>
+          <a href="#" class="demo-link" aria-label="Next">&raquo;</a>
+        </div>
+      </div>
+      <p class="mt-2">Gunakan kelas <code>.active</code> untuk menandai halaman aktif.</p>
+    </section>
+
+    <section class="card mt-2">
+      <h3>Pagination with ellipsis</h3>
+      <div class="mt-1">
+        <div class="pagination" role="navigation" aria-label="Advanced pagination">
+          <a href="#" class="demo-link">&laquo;</a>
+          <a href="#" class="demo-link">1</a>
+          <a href="#" class="demo-link">2</a>
+          <span style="display:inline-flex;align-items:center;padding:0.45rem 0.65rem;color:var(--muted)">…</span>
+          <a href="#" class="demo-link">9</a>
+          <a href="#" class="demo-link active" aria-current="page">10</a>
+          <a href="#" class="demo-link">&raquo;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="os-footer" style="margin-top:2rem">
+    <div class="os-container">Ourstrap — contoh Pagination · &copy; 2025</div>
+  </footer>
+
+  <script src="../js/ourstrap.min.js" defer></script>
+  <script src="../js/examples.js" defer></script>
+</body>
+</html>
